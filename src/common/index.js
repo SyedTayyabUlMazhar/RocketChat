@@ -1,5 +1,5 @@
-// import Component from './Component';
+import Button from './Button';
 
 export {
-  // Component,
+  Button,
 };

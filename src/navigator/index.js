@@ -4,6 +4,7 @@ import { NavigationContainer, } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import
 {
+  Chat,
   Home,
   Login
 } from '@containers';
@@ -27,6 +28,11 @@ const MainNavigator = () => {
           component={Login}
           options={{ headerShown: false }}
         />
+
+        <Stack.Screen
+          name="Chat"
+          component={Chat}
+          options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

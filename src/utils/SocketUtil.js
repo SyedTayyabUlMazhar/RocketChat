@@ -43,8 +43,32 @@ async function login (username, password)
   }
 };
 
+/**
+ * @param {string} username
+ * @param {string} message
+ */
+async function sendMessageToUser (username, message)
+{
+  try
+  {
+    const roomId = await RocketChat.driver.getDirectMessageRoomId(username);
+    console.log(`sendMessageToUser roomId of ${username}`, roomId);
+    const response = await RocketChat.driver.sendToRoomId(message, roomId);
+
+    console.log('sendMessageToUser Response:', response);
+
+    return response;
+  }
+  catch (e)
+  {
+    console.error('Error sendMessageToUser:', e);
+    throw e;
+  }
+};
+
 export default 
 { 
   connect, 
   login, 
+  sendMessageToUser,
 };

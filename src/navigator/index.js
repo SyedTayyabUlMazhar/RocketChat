@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import
 {
   Home,
+  Login
 } from '@containers';
 import { NavigationService } from '@utils';
 
@@ -18,6 +19,12 @@ const MainNavigator = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

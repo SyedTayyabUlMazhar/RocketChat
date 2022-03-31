@@ -18,8 +18,33 @@ async function connect ()
     throw e;
   }
 }
+/**
+ * 
+ * @param {string} username 
+ * @param {string} password 
+ * @returns {Promise<string>} id
+ */
+async function login (username, password)
+{
+  try
+  {
+    console.info('SocketUtil onLoginPress:', { username, password });
+    const id = await RocketChat.driver.login({
+      username,
+      password,
+    });
+    console.info('SocketUtil onLoginPress Response:', id);
+
+    return id;
+  } catch (e)
+  {
+    console.error('SocketUtil onLoginPress Error:', e);
+    alert('Failed');
+  }
+};
 
 export default 
 { 
   connect, 
+  login, 
 };

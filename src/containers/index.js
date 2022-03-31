@@ -1,5 +1,5 @@
-import Container from './Container';
+import Home from './Home';
 
 export {
-  Container,
+  Home,
 };

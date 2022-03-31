@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-navigation/native": "6.0.2",
     "@react-navigation/stack": "6.0.6",
+    "@rocket.chat/sdk": "git+https://github.com/RocketChat/Rocket.Chat.js.SDK.git#ddp",
     "@types/react-native": "^0.66.12",
     "fbjs": "^3.0.4",
     "i18n-js": "^3.8.0",
